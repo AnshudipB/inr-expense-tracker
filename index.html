@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INR Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Expense Tracker</h1>
+        <p class="subtitle">Track your money in Rupees</p>
+
+        <!-- Balance -->
+        <div class="balance-card">
+            <p>Total Balance</p>
+            <h2 id="balance">₹0.00</h2>
+        </div>
+
+        <!-- Income & Expense -->
+        <div class="summary">
+
+            <div class="summary-box income">
+                <p>Income</p>
+                <h3 id="income">₹0.00</h3>
+            </div>
+
+            <div class="summary-box expense">
+                <p>Expenses</p>
+                <h3 id="expense">₹0.00</h3>
+            </div>
+
+        </div>
+
+        <!-- Add Transaction -->
+        <div class="form-card">
+
+            <h2>Add Transaction</h2>
+
+            <form id="transactionForm">
+
+                <input type="text" id="description" placeholder="Description" required>
+
+                <input type="number" id="amount" placeholder="Amount (₹)" min="1" step="0.01" required>
+
+                <select id="type">
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                </select>
+
+                <button type="submit">
+                    Add Transaction
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Transaction List -->
+        <div class="transactions">
+
+            <h2>Transactions</h2>
+
+            <ul id="transactionList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
